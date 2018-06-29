@@ -1,0 +1,10 @@
+// -----------------------------------
+@import "./public/_reset.scss";
+@import "./public/_mixin.scss";
+
+// --基本設定--------------------------
+@import "./public/_variable.scss";
+@import "./public/_base.scss";
+
+// --頁面-----------------------------
+@import "./components/_Index.scss";

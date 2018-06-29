@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="學過就記下來。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kanboo Notes">
+  <meta property="og:url" content="https://kanboo.github.io/index.html">
+  <meta property="og:site_name" content="Kanboo Notes">
+
+  <title>DailyUI | Kanboo's Note</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/all.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107001663-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107001663-4');
+  </script>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <header class="header">
+      <h1 class="header__title">Daily UI</h1>
+      <div class="header__desc">
+        透過手刻的方式，體會CSS的美。
+      </div>
+      <div class="header__btns">
+        <a class="header__btn" href="https://github.com/kanboo" target="_blank">GitHub</a> |
+        <a class="header__btn" href="https://kanboo.github.io/" target="_blank">Blog</a>
+      </div>
+    </header>
+
+    <ul class="uiList">
+
+      <li class="uiList__item" v-for="(item, index) in uiLists" :key="index">
+        <div class="uiList__item__header" :style="{backgroundImage:`url(${item.imgUrl})`}">
+          <div class="num">No.{{ item.no }}</div>
+        </div>
+
+        <div class="uiList__item__body">
+          <h2 class="title">#{{item.title}}</h2>
+          <a class="btn" :href="item.codepen" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

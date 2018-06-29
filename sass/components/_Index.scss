@@ -1,0 +1,135 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0px;
+  text-align: center;
+
+  @media screen and (max-width: 1064px) {
+    width: 100%;
+  }
+}
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+
+  &__title {
+    font-family: "Dancing Script", cursive;
+    font-size: 6em;
+  }
+
+  &__desc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: inline-block;
+    overflow: hidden;
+    width: 170px;
+    height: 48px;
+    margin: 5px 15px;
+    padding: 10px 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fafafa;
+    outline: 0;
+    background-color: #333333;
+    line-height: 30px;
+  }
+}
+
+.uiList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.uiList__item {
+  display: flex;
+  flex-flow: column wrap;
+  width: 32%;
+  height: auto;
+  margin-bottom: 40px;
+  transition: all .3s;
+  transform: scale(.95);
+  border: 1px solid #cccccc;
+
+  &:nth-child(3n + 1),&:nth-child(3n + 2) {
+    margin-right: 1.5%;
+  }
+
+  &:hover {
+    transform: scale(1);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+  }
+
+  @media screen and (max-width: 1064px) {
+    width: 48%;
+  }
+
+  @media screen and (max-width: 709px) {
+    width: 100%;
+  }
+
+  &__header {
+    position: relative;
+    height: 240px;
+    cursor: pointer;
+    user-select: none;
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-size: cover;
+
+    .num {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      padding: .2rem .7rem;
+      text-align: center;
+      color: #ffffff;
+      background: rgba(0, 0, 0, .9);
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__body {
+    @include flex(space-between, center);
+
+    padding-top: 16px;
+
+    .title {
+      margin: 2px 0px;
+      padding: 10px 10px;
+      text-align: left;
+      background-color: transparent;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      overflow: hidden;
+      width: 100px;
+      padding: 10px 0px;
+      cursor: pointer;
+      user-select: none;
+      transition: .5s;
+      vertical-align: middle;
+      text-decoration: none;
+      color: #000000;
+      outline: 0;
+      font-size: 32px;
+
+      &:hover {
+        transform: rotate(360deg) scale(1.4);
+        color: $color-green;
+      }
+    }
+  }
+}

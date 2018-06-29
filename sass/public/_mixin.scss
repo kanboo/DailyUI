@@ -1,0 +1,14 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($main, $other: $main) {
+  display: flex;
+  justify-content: $main;
+  align-items: $other;
+}
+
+@mixin outline($color) {
+  outline: 1px solid $color;
+}
