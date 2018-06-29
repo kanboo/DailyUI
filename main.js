@@ -177,13 +177,15 @@ var datas = [
   {
     no: 61,
     title: '61. Redeem Coupon',
-    imgUrl: '',
+    imgUrl:
+      'https://raw.githubusercontent.com/kanboo/DailyUI/master/img/dailyui_61.png',
     codepen: 'https://codepen.io/Kanboo/pen/zjXoaR'
   },
   {
     no: 71,
     title: '71. Schedule',
-    imgUrl: '',
+    imgUrl:
+      'https://raw.githubusercontent.com/kanboo/DailyUI/master/img/dailyui_71.png',
     codepen: 'https://codepen.io/Kanboo/pen/ZoZBwa'
   }
 ];
